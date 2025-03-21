@@ -19,15 +19,20 @@
   --Rose-800: hsl(332, 51%, 32%);
   --Rose-50: hsl(330, 100%, 98%);
 
-  --space-100: 0.25rem;
-  --space-200: 0.5rem;
-  --space-300: 0.75rem;
-  --space-400: 1rem;
-  --space-500: 1.5rem;
-  --space-600: 2rem;
-  --space-700: 2.5rem;
-  --space-800: 4rem;
-  --space-1000: 8rem;
+  --size-100: 0.3rem;
+  --size-150: 0.4rem;
+  --size-200: 0.5rem;
+  --size-300: 0.8rem;
+  --size-350: 0.9rem;
+  --size-400: 1rem;
+  --size-500: 1.2rem;
+  --size-600: 1.4rem;
+  --size-650: 1.5rem;
+  --size-700: 1.6rem;
+  --size-800: 1.8rem;
+  --size-900: 2rem;
+  --size-1000: 2.5rem;
+  --size-1100: 3rem;
 }
 
 body {
@@ -36,15 +41,15 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
   background-color: var(--white);
   max-width: 737px;
-  padding: var(--space-700);
-  margin: 5rem var(--space-600);
-  border-radius: 10px;
+  padding: var(--size-1000);
+  margin: 6rem var(--size-900);
+  border-radius: var(--size-300);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,15 +57,15 @@ body {
 
 .hero-img img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: var(--size-300);
 }
 
 /* Recipe Info section*/
 
 .recipe-info h1 {
-  margin-top: var(--space-600);
-  margin-bottom: var(--space-400);
-  font-size: var(--space-700);
+  margin-top: var(--size-900);
+  margin-bottom: var(--size-400);
+  font-size: var(--size-1000);
   font-family: "Young serif", sans-serif;
   font-weight: 400;
   color: var(--Stone-900);
@@ -68,36 +73,137 @@ body {
 
 .recipe-info p {
   color: var(--Stone-600);
-  margin-bottom: var(--space-600);
+  margin-bottom: var(--size-900);
 }
 
+/* Preparation section */
 .preparation {
   background-color: var(--Rose-50);
-  border-radius: 10px;
+  border-radius: var(--size-300);
   font-family: "Outfit", sans-serif;
   padding: 1.8rem;
 }
 
 .preparation p {
-  font-size: 1.2rem;
+  font-size: var(--size-500);
   font-weight: bold;
-  margin-bottom: 0.8rem;
+  margin-bottom: var(--size-300);
   color: var(--Rose-800);
 }
 
 .preparation ul {
   list-style: none;
-  padding-left: var(--space-200);
+  padding-left: var(--size-200);
 }
 
 .preparation li {
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--size-200);
   color: var(--Stone-600);
 }
 
 .preparation li::before {
   content: "•";
-  font-size: 1.2rem;
-  padding-right: var(--space-500);
+  font-size: var(--size-500);
+  padding-right: var(--size-650);
   color: var(--Rose-800);
+}
+
+/* Ingredients section */
+.ingredients {
+  border-radius: var(--size-300);
+  padding: var(--size-700) 0 var(--size-700) 0;
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+.ingredients p {
+  font-size: var(--size-800);
+  font-family: "Young serif", sans-serif;
+  font-weight: 500;
+  margin-bottom: var(--size-300);
+  color: var(--Brown-800);
+}
+
+.ingredients ul {
+  list-style: none;
+  padding-left: var(--size-200);
+}
+
+.ingredients li {
+  margin-bottom: var(--size-150);
+  color: var(--Stone-600);
+}
+
+.ingredients li::before {
+  content: "•";
+  font-size: var(--size-500);
+  padding-right: var(--size-650);
+  color: var(--Rose-800);
+}
+
+/*Instructions section */
+
+.instructions {
+  padding: var(--size-700) 0 var(--size-700) 0;
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+.instructions p {
+  font-size: var(--size-800);
+  font-family: "Young serif", sans-serif;
+  font-weight: 500;
+  margin-bottom: var(--size-300);
+  color: var(--Brown-800);
+}
+
+.instructions ol {
+  list-style: none;
+  padding-left: var(--size-500);
+}
+
+.instructions ol li {
+  counter-increment: number;
+  margin-bottom: var(--size-350);
+  padding-left: var(--size-500);
+  color: var(--Stone-600);
+}
+
+.instructions ol li::marker {
+  content: counter(number) ".";
+  color: var(--Brown-800);
+  font-weight: 700;
+}
+
+/* Nutrition section */
+
+.nutrition {
+  padding: var(--size-700) 0 var(--size-700) 0;
+}
+
+.nutrition p:nth-child(1) {
+  font-size: var(--size-800);
+  font-family: "Young serif", sans-serif;
+  font-weight: 500;
+  margin-bottom: var(--size-300);
+  color: var(--Brown-800);
+}
+
+.nutrition p:nth-child(2) {
+  color: var(--Stone-600);
+  margin-bottom: var(--size-300);
+}
+
+.nutrition th {
+  border-bottom: 1px solid var(--Stone-150);
+  color: var(--Stone-600);
+  font-weight: 400;
+  padding-left: var(--size-500);
+}
+
+.nutrition td {
+  width: 100%;
+  padding: var(--size-300);
+  text-align: center;
+  border-bottom: 1px solid var(--Stone-150);
+  color: var(--Brown-800);
+  font-weight: 700;
 }
