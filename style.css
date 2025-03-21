@@ -75,27 +75,29 @@ body {
   background-color: var(--Rose-50);
   border-radius: 10px;
   font-family: "Outfit", sans-serif;
-  padding: var(--space-500);
+  padding: 1.8rem;
 }
 
-.preparation h3 {
-  margin-bottom: var(--space-300);
+.preparation p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
   color: var(--Rose-800);
 }
 
 .preparation ul {
   list-style: none;
-  padding-left: var(--space-300);
+  padding-left: var(--space-200);
 }
 
 .preparation li {
-  margin-bottom: var(--space-100);
+  margin-bottom: 0.5rem;
   color: var(--Stone-600);
 }
 
 .preparation li::before {
   content: "•";
-  font-size: 1.4rem;
-  padding-right: var(--space-400);
+  font-size: 1.2rem;
+  padding-right: var(--space-500);
   color: var(--Rose-800);
 }
