@@ -35,6 +35,7 @@
   --size-1100: 3rem;
   --size-1200: 6rem;
   --size-1300: 7rem;
+  --size-1400: 8rem;
 
   --font-young: "Young serif", sans-serif;
   --font-outfit: "Outfit", sans-serif;
@@ -53,7 +54,7 @@ body {
   background-color: var(--white);
   max-width: 737px;
   padding: var(--size-1000) var(--size-1000) 0.9rem;
-  margin: var(--size-1300) 0 var(--size-1300);
+  margin: var(--size-1400) 0 var(--size-1300);
   border-radius: var(--size-300);
   display: flex;
   flex-direction: column;
