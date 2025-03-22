@@ -33,10 +33,15 @@
   --size-900: 2rem;
   --size-1000: 2.5rem;
   --size-1100: 3rem;
+  --size-1200: 6rem;
+  --size-1300: 7rem;
+
+  --font-young: "Young serif", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
 }
 
 body {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-outfit);
   background-color: var(--Stone-100);
   display: flex;
   justify-content: center;
@@ -47,8 +52,8 @@ body {
 .container {
   background-color: var(--white);
   max-width: 737px;
-  padding: var(--size-1000);
-  margin: 6rem var(--size-900);
+  padding: var(--size-1000) var(--size-1000) 0.9rem;
+  margin: var(--size-1200) 0 var(--size-1300);
   border-radius: var(--size-300);
   display: flex;
   flex-direction: column;
@@ -66,7 +71,7 @@ body {
   margin-top: var(--size-900);
   margin-bottom: var(--size-400);
   font-size: var(--size-1000);
-  font-family: "Young serif", sans-serif;
+  font-family: var(--font-young);
   font-weight: 400;
   color: var(--Stone-900);
 }
@@ -111,13 +116,13 @@ body {
 /* Ingredients section */
 .ingredients {
   border-radius: var(--size-300);
-  padding: var(--size-700) 0 var(--size-700) 0;
+  padding: var(--size-800) 0 var(--size-800) 0;
   border-bottom: 1px solid var(--Stone-150);
 }
 
 .ingredients p {
   font-size: var(--size-800);
-  font-family: "Young serif", sans-serif;
+  font-family: var(--font-young);
   font-weight: 500;
   margin-bottom: var(--size-300);
   color: var(--Brown-800);
@@ -149,7 +154,7 @@ body {
 
 .instructions p {
   font-size: var(--size-800);
-  font-family: "Young serif", sans-serif;
+  font-family: var(--font-young);
   font-weight: 500;
   margin-bottom: var(--size-300);
   color: var(--Brown-800);
@@ -181,7 +186,7 @@ body {
 
 .nutrition p:nth-child(1) {
   font-size: var(--size-800);
-  font-family: "Young serif", sans-serif;
+  font-family: var(--font-young);
   font-weight: 500;
   margin-bottom: var(--size-300);
   color: var(--Brown-800);
@@ -190,6 +195,11 @@ body {
 .nutrition p:nth-child(2) {
   color: var(--Stone-600);
   margin-bottom: var(--size-300);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .nutrition th {
@@ -206,4 +216,35 @@ body {
   border-bottom: 1px solid var(--Stone-150);
   color: var(--Brown-800);
   font-weight: 700;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:last-child th {
+  border-bottom: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: var(--size-1000) var(--size-500) 0.9rem;
+    margin: var(--size-1000) var(--size-200) var(--size-1300);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--size-500);
+    margin: 0 0;
+    border-radius: 0;
+  }
+
+  .hero-img img {
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
 }
