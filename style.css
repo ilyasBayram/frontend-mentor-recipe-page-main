@@ -248,4 +248,8 @@ tr:last-child th {
     left: 0;
     right: 0;
   }
+
+  .recipe-info {
+    margin-top: 11rem;
+  }
 }
